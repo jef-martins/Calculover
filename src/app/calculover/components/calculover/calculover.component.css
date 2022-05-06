@@ -1,0 +1,61 @@
+body {
+    /* background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p1/2207677-fundo-de-flor-de-cerejeira-gr%C3%A1tis-vetor.jpg"); */
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/003/212/272/small/abstract-black-and-grey-geometric-diagonal-overlay-layer-background-free-vector.jpg");    
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+h3 {
+    font-family: 'Satisfy', cursive;
+    font-size: bold;
+    font-size: 35px;
+    text-align: center;
+}
+
+.mar {
+    margin: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.tamanho {
+    width: 60%;
+}
+
+.centralizando {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.cor {
+    color: #ffffff;
+    align-items: center;
+}
+
+/* .a {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    background-color: #000000;
+    border-color:  #000000;
+} */
+
+.cor_modal{
+    background-color: rgb(60, 60, 60);
+    align-items: center;
+    text-align: justify;
+    color: white;
+    font-size: 70px;
+}
+
+.cor2 {
+    color: black;
+}

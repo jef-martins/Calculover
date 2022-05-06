@@ -1,0 +1,41 @@
+<body class="centralizando">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+                <form [formGroup]="formName">
+                    <h3 class="cor">Teste sua Chance</h3>
+                    <input formControlName="fname" type="text" style="width: 500px;" class="mar form-control"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                        placeholder="Feminino">
+                </form>
+                <form [formGroup]="formName">
+                    <input formControlName="sname" style="width: 500px;" type="text" class="mar form-control"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                        placeholder="Masculino">
+                </form>
+                <button type="button" style="width: 500px" class="btn btn-dark mar tamanho" data-bs-toggle="modal"
+                    (click)="enviarNomes()"
+                    [disabled]="!(formName.controls['fname'].valid && formName.controls['sname'].valid)"
+                    data-bs-target="#exampleModal" (click)="teste()">
+                    Calcular Probabilidade
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<ng-template #defaultTabButtons class="modal-dialog modal-dialog-centered" id="exampleModal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <h4 class="cor2 modal-title" id="exampleModalLabel">Resultado:</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <p>Sua probabilidade é: {{resultado?.percentage}}</p><br>
+        <p>{{resultado ? traduzir(resultado?.percentage) : ''}}</p>
+       
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-dark text-white hidePrevented.bs.modal" (click)="recarrega()"
+            data-bs-dismiss="modal">Fechar</button>
+    </div>
+</ng-template>
